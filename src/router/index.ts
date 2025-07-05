@@ -21,13 +21,27 @@ const routes: RouteRecordRaw[] = [
         name: 'contact',
         component: () => import('../views/ContactView.vue')
       },
+       {
+        path: 'quick-study',
+        name: 'quick-study',
+        component: () => import('../views/QuickStudyView.vue')
+      },
+       {
+        path: 'review-mode',
+        name: 'review-mode',
+        component: () => import('../views/ReviewModeView.vue')
+      },
+       {
+        path: 'progress',
+        name: 'progress',
+        component: () => import('../views/ProgressView.vue')
+      },
       {
         path: 'flashcards',
         name: 'flashcards',
         component: () => import('../views/FlashCardView.vue')
       },
-      // ===== [New Feature] START =====
-      // Changed from 'deck' to 'deck/:deckId' to support dynamic deck navigation
+      
       {
         path: 'deck/:deckId', // <-- Dynamic segment for deckId
         name: 'deck-study',

@@ -45,8 +45,9 @@
 
   <AddDeckModal
     v-if="showAddDeckModal"
-    @close="handleCloseModal"
-    @deck-added="handleDeckAdded"
+    @add="handleDeckAdded"
+    @cancel="handleCloseModal"
+    
   />
 </template>
 
@@ -63,6 +64,15 @@
 // ===== Imports =====
 import { ref } from 'vue'
 import AddDeckModal from '@/components/modals/AddDeckModal.vue'
+import { useFlashStorage } from '@/stores/useFlashStorage'
+
+/**
+ * We use Pinia's storeToRefs to get reactive references to the decks array.
+ * This ensures the UI updates automatically when the store changes.
+ */
+const flashStorage = useFlashStorage()
+
+
 
 // ===== Emits =====
 /**
@@ -92,9 +102,21 @@ function handleCloseModal() {
  * Handles successful deck addition.
  * Closes the modal and emits 'refresh-decks' to parent.
  */
-function handleDeckAdded(/* newDeck */) {
+
+
+function handleDeckAdded(payload: { title: string; description: string }) {
+  const newId = `deck-${Date.now()}-${Math.floor(Math.random() * 10000)}`
+  flashStorage.addDeck({
+    id: newId,
+    title: payload.title,
+    subject: 'general',
+    cardCount: 0,
+    description: payload.description,
+    createdAt: Date.now(),
+    progress: 0
+  })
   showAddDeckModal.value = false
   emit('refresh-decks')
-  // Optionally: show a toast or success message here
+  
 }
 </script>
