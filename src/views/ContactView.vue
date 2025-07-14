@@ -37,7 +37,7 @@
                 <div>
                   <h3 class="font-semibold text-gray-800 mb-1">Address</h3>
                   <p class="text-gray-600">SOS Hermann-Gmeiner School in Tema, Ghana</p>
-                </div>
+                </div> 
               </div>
             </div>
 
@@ -54,7 +54,7 @@
                   <h3 class="font-semibold text-gray-800 mb-1">Email</h3>
                   <p class="text-gray-600 mb-2">edwardappiahpoku@gmail.com</p>
                   <a
-                    href="mailto:StudyDockConsult@gmail.com"
+                    href="mailto:edwardappiahpoku@gmail.com"
                     class="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-primary hover:bg-primary-dark rounded-md transition-colors duration-300"
                   >
                     Send Email

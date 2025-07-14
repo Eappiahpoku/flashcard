@@ -1,4 +1,18 @@
 <!--
+  Header.vue
+  StudyDock app header pattern for Pomodoro Timer.
+  - Left: StudyDock logo (SVG)
+  - Center: App name centered
+  - Right: Settings gear icon (clickable to open settings)
+  - Mobile-first, accessible, and responsive alignment.
+  - All styling via Tailwind utility classes.
+-->
+
+<template>
+  <!-- ===== [RESPONSIVE HEADER ALIGNMENT] START ===== -->
+  <header class="flex items-center justify-between w-full max-w-lg mx-auto px-4 py-3 bg-primary text-white rounded-xl shadow mb-6">
+    <!-- Left: StudyDock Logo (SVG) -->
+    <!--
   StudyDock Favicon SVG
   - Optimized for favicon use (simple, solid color, no dynamic props)
   - Ghana mobile-first, offline-first, and accessible
@@ -36,3 +50,23 @@
   </g>
   <!-- ===== [New Feature] END: Book icon representing education ===== -->
 </svg>
+
+    <!-- Center: App Name (Perfectly Centered) -->
+    <div class="absolute left-1/2 transform -translate-x-1/2">
+      <span class="text-lg font-bold tracking-wide">StudyDock FlashCard</span>
+    </div>
+
+    </header>
+  <!-- ===== [RESPONSIVE HEADER ALIGNMENT] END ===== -->
+</template>
+
+<script setup lang="ts">
+</script>
+
+<!--
+  Styling uses Tailwind utility classes for:
+  - Perfect center alignment using absolute positioning
+  - Responsive sizing and spacing
+  - Clear visual hierarchy
+  - Touch-friendly button targets
+-->

@@ -10,8 +10,11 @@
 
 <template>
   <!-- ===== Main Home Page Layout ===== -->
+    <AppHeader />
+
+    
   <HeroSection />
-  <AppHeader />
+ 
   <FlashDeckView />
 
  
@@ -19,7 +22,7 @@
 
 <script setup lang="ts">
 // ===== Imports =====
-
+import AppHeader from '@/components/layout/AppHeader.vue';
 import HeroSection from '@/components/layout/HeroSection.vue'
 import FlashDeckView from './FlashDeckView.vue'
 
