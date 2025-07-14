@@ -2,16 +2,17 @@
   FlashDeckList.vue
   -----------------------------------
   Displays a list of study decks for the user.
-  - Loads decks from Pinia store (useFlashStorage).
+  - Loads decks from Pinia store (useFlashStorage.ts).
   - Handles loading, error, and empty states.
   - Mobile-first, offline-first, Ghana-optimized.
   - Now supports adding, editing, and deleting decks via modals and inline forms.
   - Deck card (except buttons) is now clickable to view flashcards.
   - <!-- ===== [New Feature] START ===== --> "Study" button now launches StudyFlashcardModal for that deck.
   - <!-- ===== [New Feature] START ===== --> Study modal now loads cards from global store, not deck.cards.
--->
+
 
 <template>
+ 
   <!-- ===== FlashDeck List Container ===== -->
   <div class="flashdeck-list-wrapper">
     <!-- ===== List Header ===== -->
@@ -22,7 +23,7 @@
           {{ isLoading ? 'Loading decks...' : (flashDecks.length + ' ' + (flashDecks.length === 1 ? 'deck' : 'decks') + ' available') }}
         </p>
       </div>
-      <!-- ===== [New Feature] START ===== -->
+     <!-- ===== [New Feature] START ===== -->
       <button
         @click="showAddDeckModal = true"
         class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors mt-2 sm:mt-0"
@@ -98,7 +99,8 @@
             @keydown.space.prevent="handleDeckSelect(deck.id)"
             role="button"
             aria-label="Open deck"
-          >
+          > 
+        
             <div class="font-semibold text-lg text-gray-800">{{ deck.title }}</div>
             <div class="text-gray-600 text-base truncate">{{ deck.description }}</div>
             <div class="text-xs text-gray-400 mt-1">
@@ -361,6 +363,8 @@ function reload() {
   isLoading.value = false
   error.value = ''
 }
+
+
 
 /**
  * Handle when a deck is selected.

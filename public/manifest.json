@@ -1,11 +1,11 @@
 {
-    "name": "StudyDock App",
+    "name": "StudyDock FlashCard",
     "short_name": "StudyDock",
     "description": "A mobile-first application optimized for Ghana's connectivity conditions",
     "start_url": "/?source=pwa",
     "display": "standalone",
-    "background_color": "#F9FAFB",
-    "theme_color": "#2C7865",
+    "background_color": "#FFFFFF",
+    "theme_color": "#1F3A8A",
     "orientation": "portrait-primary",
     "lang": "en-GH",
     "dir": "ltr",
@@ -90,7 +90,6 @@
             "purpose": "any maskable"
         }
     ],
-    "prefer_related_applications": false,
     "related_applications": [],
     "screenshots": [
         {
@@ -135,3 +134,4 @@
         "preferred_width": 480
     }
 }
+

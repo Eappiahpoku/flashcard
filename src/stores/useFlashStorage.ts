@@ -65,46 +65,12 @@ export const useFlashStorage = defineStore('flashStorage', () => {
 
   // List of all decks (default static data, will be replaced by localForage if available)
   const decks = ref<FlashDeck[]>([
-    {
-      id: 'deck-1',
-      title: 'Biology Basics',
-      subject: 'biology',
-      cardCount: 2, // This matches the 2 biology cards below
-      progress: 50,
-      lastStudied: '2025-07-01',
-      createdAt: 1720070400000 // ===== [New Feature] START ===== (example: 2025-07-04T00:00:00Z)
-    },
-    {
-      id: 'deck-2',
-      title: 'Ghana History',
-      subject: 'history',
-      cardCount: 1, // This matches the 1 history card below
-      progress: 100,
-      lastStudied: '2025-06-28',
-      createdAt: 1719532800000 // ===== [New Feature] START ===== (example: 2025-07-03T00:00:00Z)
-    }
+    
   ])
 
   // List of all cards (default static data, will be replaced by localForage if available)
   const cards = ref<FlashCard[]>([
-    {
-      id: 'card-1',
-      term: 'Cell',
-      definition: 'The basic structural, functional, and biological unit of all living organisms.',
-      deckId: 'deck-1' // Biology deck
-    },
-    {
-      id: 'card-2',
-      term: 'Photosynthesis',
-      definition: 'The process by which green plants use sunlight to synthesize foods from carbon dioxide and water.',
-      deckId: 'deck-1' // Biology deck
-    },
-    {
-      id: 'card-3',
-      term: 'Kwame Nkrumah',
-      definition: 'The first President of Ghana and a key figure in the country\'s independence.',
-      deckId: 'deck-2' // History deck
-    }
+   
   ])
 
   // ===== [New Feature] START =====

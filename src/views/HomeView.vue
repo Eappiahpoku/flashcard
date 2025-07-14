@@ -13,7 +13,6 @@
   <HeroSection />
   <AppHeader />
   <FlashDeckView />
-  <QuickAction />
 
  
 </template>
@@ -23,7 +22,7 @@
 
 import HeroSection from '@/components/layout/HeroSection.vue'
 import FlashDeckView from './FlashDeckView.vue'
-import QuickAction from '@/components/layout/QuickAction.vue'
+
 
 
 

@@ -21,21 +21,6 @@ const routes: RouteRecordRaw[] = [
         name: 'contact',
         component: () => import('../views/ContactView.vue')
       },
-       {
-        path: 'quick-study',
-        name: 'quick-study',
-        component: () => import('../views/QuickStudyView.vue')
-      },
-       {
-        path: 'review-mode',
-        name: 'review-mode',
-        component: () => import('../views/ReviewModeView.vue')
-      },
-       {
-        path: 'progress',
-        name: 'progress',
-        component: () => import('../views/ProgressView.vue')
-      },
       {
         path: 'flashcards',
         name: 'flashcards',
